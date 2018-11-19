@@ -1,0 +1,334 @@
+//
+//	form
+//	====
+//	Marketoフォーム
+//
+
+.form {
+	
+	#{&} &_in {
+		
+		* {
+
+			box-sizing: border-box;
+
+		}
+		
+		width: 660px;
+		margin: 100px auto;
+		
+		input {
+
+			&::placeholder {
+
+				color: inherit;
+
+			}
+
+			&:focus {
+
+				border-color: inherit;
+				outline: none;
+
+			}
+
+		}
+		
+		.mkto {
+			
+			&Form {
+				
+				margin-top: -10px;
+			
+				&Row {
+
+					display: flex;
+
+				}
+				
+				&Col {
+					
+					width: 100%;
+					
+				}
+				
+				&.mktoLayoutAbove {
+				
+					.mktoRequiredField {
+
+						label.mktoLabel {
+
+
+						}
+
+						.mktoAsterix {
+							
+							color: $color3;
+
+						}
+
+					}
+					
+				}
+				
+				.mktoError {
+					
+					.mktoErrorArrow {
+						
+						background: $color2;
+						border: 0;
+					
+					}
+					
+					.mktoErrorMsg {
+						
+						max-width: none;
+						padding: 14px 15px;
+						background: $color2;
+						border: 0;
+						color: #fff;
+						font-size: 15px;
+						text-shadow: none;
+						box-shadow: none;
+					
+					}
+					
+				}
+					
+			}
+			
+			&Offset {
+				
+				display: none;
+				
+			}
+			
+			&HasWidth {
+			
+				width: 100%;
+				
+			}
+			
+			&Label {
+				
+				margin-top: 20px;
+				padding: 0 0 2px;
+				font-size: 13px;
+				
+			}
+		
+			&Field {
+			
+				padding: 13px 20px;
+				border: 1px solid $color4;
+				font-size: 15px;
+				
+				&Wrap {
+					
+					width: 100%;
+					padding: 0 10px;
+					
+				}
+
+			}
+			
+			&TextField {
+				
+			}
+			
+			&EmailField {
+			
+				
+			}
+			
+			&Button {
+				
+				&Row {
+					
+					margin-top: 45px;
+					padding: 0 10px;
+					display: block;
+				
+				}
+			
+				&Wrap {
+				
+					display: block;
+				
+					&.mktoMinimal {
+
+						& .mktoButton {
+
+							width: 100%;
+							padding: 23px 0;
+							background: $color5;
+							border: 0;
+							color: #fff;
+							font: inherit;
+							font-size: 17px;
+							font-weight: bold;
+							text-shadow: none;
+							box-shadow: none;
+							transition-property: background-color;
+    						transition-duration: .4s;
+							
+							&:hover {
+								
+								background: rgba( $color5, .8 );
+								color: #fff;
+								box-shadow: none;
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			&HtmlText {
+				
+				width: auto;
+				margin: 5px 20px 0;
+				font-size: 11px;
+				line-height: 1.8;
+				
+				a {
+					
+					text-decoration: underline;
+					
+					&:hover {
+						
+						text-decoration: none;
+						
+					}
+					
+				}
+			
+			}
+			
+		}
+	
+	}
+	
+	@media screen and (max-width: 414px) {
+		
+		#{&} &_in {
+			
+			width: auto;
+			margin: 33px 0;
+
+			.mkto {
+
+				&Form {
+
+					margin-top: 15px;
+					padding: 0 25px;
+
+					&Row {
+					}
+
+					&Col {
+					}
+
+					&.mktoLayoutAbove {
+
+						.mktoRequiredField {
+
+							padding: 0 5px;
+
+							.mktoAsterix {
+
+								&::before {
+
+									font-size: 10px;
+
+								}
+
+							}
+
+						}
+
+					}
+
+					.mktoError {
+
+						.mktoErrorArrow {
+						}
+
+						.mktoErrorMsg {
+						}
+
+					}
+
+				}
+
+				&Offset {
+				}
+
+				&HasWidth {
+				}
+
+				&Label {
+
+					margin-top: 15px;
+					font-size: 13px;
+
+				}
+
+				&Field {
+
+					padding: 20px 20px;
+					font-size: 13px;
+
+					&Wrap {
+					}
+
+				}
+
+				&TextField {
+				}
+
+				&EmailField {
+				}
+
+				&Button {
+
+					&Row {
+					}
+
+					&Wrap {
+
+						&::before {
+						}
+
+						&.mktoMinimal {
+
+							& .mktoButton {
+
+								padding: 22px 0;
+								font-size: 15px;
+
+								&:hover {
+								}
+
+							}
+
+						}
+
+					}
+
+				}
+
+				&HtmlText {
+				}
+
+			}
+			
+		}
+
+	}
+	
+}
